@@ -68,15 +68,15 @@
           font-weight:700;
       }
       
-      a {
+      a{
           text-decoration: none;
       }
 
-      a::before {
+      a::before, #w::before {
           content:'[';
       }
 
-      a::after {
+      a::after, #w::after {
           content:']';
       }
       
@@ -84,7 +84,7 @@
           color: var(--foreground);
       }
       
-      a:hover {
+      a:hover, input {
           font-weight: 700;
       }
       
@@ -99,6 +99,13 @@
       .lst > a+a+a+a+a::before,        .lst > a+a+a+a+a::after     {color: var(--color5)}
       .lst > a+a+a+a+a+a::before,      .lst > a+a+a+a+a+a::after   {color: var(--color6)}
       .lst > a+a+a+a+a+a+a::before,    .lst > a+a+a+a+a+a+a::after {color: var(--color7)}
+
+
+      #q {
+          background: none;
+          color: white;
+          outline: none !important;
+      }
 
     </style>
     <title>home</title>
@@ -132,6 +139,14 @@
                 <span class="categories">Fun</span>
                 <a href="https://www.dailykillersudoku.com/">killer sudoku</a>
                 <a href="https://www.nytimes.com/crosswords/game/mini">mini-crossword</a>
+            </div>
+            <div class="lst">
+                <span class="categories">Search</span>
+                <form action=https://www.google.com/search >
+                    <span id=w>
+                    <input id=q name=q type="text" oninput="this.style.width = `${this.value.length + 1}ch`" style="width:1ch;border:none;font:mono"></input>
+                    </span>
+                </form>
             </div>
         </div>
     </div>
