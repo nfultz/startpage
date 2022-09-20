@@ -32,7 +32,7 @@
       	font-size: x-large;
       }
       
-      html {
+      html, #q {
           /*font-size: 18px;*/
           font-family: 'Noto Sans Mono', monospace;
           /*font-weight: black;*/
@@ -145,7 +145,7 @@
                 <span class="categories">Search</span>
                 <form action=https://www.google.com/search >
                     <span id=w>
-                    <input id=q name=q type="text" oninput="this.style.width = `${this.value.length + 1}ch`" style="width:1ch;border:none;font:mono"></input>
+                    <input id=q name=q type="text"></input>
                     </span>
                 </form>
             </div>
