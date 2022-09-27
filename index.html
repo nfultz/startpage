@@ -27,48 +27,41 @@
       	--color15: #eeffff;
       }
       
-      * {
-      	font-size: x-large;
-      }
-      
       html, #q {
           /*font-size: 18px;*/
           font-family: 'Noto Sans Mono', monospace;
           /*font-weight: black;*/
           background-color: var(--background);
           color: var(--foreground);
+      	  font-size: x-large;
       }
       
-      .box {
-          width: 70%;
-          right: 50%;
-          bottom: 50%;
-          transform: translate(50%, 50%);
-          position: absolute;
+      /* h/t https://gist.github.com/JoeyBurzynski/617fb6201335779f8424ad9528b72c41 */
+      main {
+          max-width: 38rem;
+          padding: 2rem;
+          margin: auto;
       }
       
-      .items {
-          float: left;
-          margin 0;
-          width: 90%;
-          text-align: left;
+      ul {
+          list-style-type:none;
       }
       
-      .lst {
+      li {
           padding: .5em;
           clear:both;
       }
 
-      .categories {
+      label {
           float: left;
-          margin 0;
-          width: 20%;
+          min-width: 10ch;
           text-align: left;
-          font-weight:700;
+          font-weight: bold;
       }
       
       a{
           text-decoration: none;
+          white-space: nowrap;
       }
 
       a::before, #w::before {
@@ -84,20 +77,22 @@
       }
       
       a:hover {
-          font-weight: 700;
+          font-weight: bold;
       }
       
       a:visited {
           color: var(--foreground);
       }
       
-      .lst > a::before,                .lst > a::after             {color: var(--color1)}
-      .lst > a+a::before,              .lst > a+a::after           {color: var(--color2)}
-      .lst > a+a+a::before,            .lst > a+a+a::after         {color: var(--color3)}
-      .lst > a+a+a+a::before,          .lst > a+a+a+a::after       {color: var(--color4)}
-      .lst > a+a+a+a+a::before,        .lst > a+a+a+a+a::after     {color: var(--color5)}
-      .lst > a+a+a+a+a+a::before,      .lst > a+a+a+a+a+a::after   {color: var(--color6)}
-      .lst > a+a+a+a+a+a+a::before,    .lst > a+a+a+a+a+a+a::after {color: var(--color7)}
+      li > a::before,                    li > a::after                 {color: var(--color1)}
+      li > a+a::before,                  li > a+a::after               {color: var(--color2)}
+      li > a+a+a::before,                li > a+a+a::after             {color: var(--color3)}
+      li > a+a+a+a::before,              li > a+a+a+a::after           {color: var(--color4)}
+      li > a+a+a+a+a::before,            li > a+a+a+a+a::after         {color: var(--color5)}
+      li > a+a+a+a+a+a::before,          li > a+a+a+a+a+a::after       {color: var(--color6)}
+      li > a+a+a+a+a+a+a::before,        li > a+a+a+a+a+a+a::after     {color: var(--color7)}
+      li > a+a+a+a+a+a+a+a::before,      li > a+a+a+a+a+a+a+a::after   {color: var(--color8)}
+      li > a+a+a+a+a+a+a+a+a::before,    li > a+a+a+a+a+a+a+a+a::after {color: var(--color9)}
 
 
       #q {
@@ -105,7 +100,6 @@
           outline: none !important;
           vertical-align: middle;
           text-align: center;
-
       }
 
     </style>
@@ -113,46 +107,46 @@
 </head>
 
 <body>
-    <div class="box">
+    <main>
         <h1> HIA RYLAH </h1>
-        <div class="items">
-            <div class="lst">
-                <span class="categories">Personal</span>
+        <ul>
+            <li>
+                <label>Personal</label>
                 <a href="http://www.neal.news">neal.news</a>
                 <a href="https://nfultz.github.io">nfultz.github.io</a>
-            </div>
-            <div class="lst">
-                <span class="categories">Work</span>
+            </li>
+            <li>
+                <label>Work</label>
                 <a href="https://github.com/nfultz">gh</a>
                 <a href="https://www.stackoverflow.com/">so</a>
-                <a href="https://mail.google.com/mail/ca/u/0">gmail0</a>
-                <a href="https://mail.google.com/mail/ca/u/1">gmail1</a>
-                <a href="https://mail.google.com/mail/ca/u/2">gmail2</a>
+                <a href="https://mail.google.com/mail/ca/u/0">gm0</a>
+                <a href="https://mail.google.com/mail/ca/u/1">gm1</a>
+                <a href="https://mail.google.com/mail/ca/u/2">gm2</a>
                 <a href="https://app.slack.com/client?multi_team=1">slack</a>
-            </div>
-            <div class="lst">
-                <span class="categories">Social</span>
+            </li>
+            <li>
+                <label>Social</label>
                 <a href="https://reddit.com/">reddit</a>
                 <a href="https://youtube.com">yt</a>
                 <a href="https://discord.com/channels/@me">discord</a>
                 <a href="https://pinboard.in/popular">pin</a>
                 <a href="https://metafilter.com">meta</a>
                 <a href="https://forums.somethingawful.com/usercp.php">sa</a>
-            </div>
-            <div class="lst">
-                <span class="categories">Fun</span>
+            </li>
+            <li>
+                <label>Fun</label>
                 <a href="https://www.dailykillersudoku.com/">killer sudoku</a>
                 <a href="https://www.nytimes.com/crosswords/game/mini">mini-crossword</a>
-            </div>
-            <div class="lst">
-                <span class="categories">Search</span>
+            </li>
+            <li>
+                <label>Search</label>
                 <form action=https://www.google.com/search >
                     <span id=w>
                     <input id=q name=q type="text"></input>
                     </span>
                 </form>
-            </div>
-        </div>
-    </div>
+            </li>
+        </ul>
+    </main>
 </body>
 </html>
