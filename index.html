@@ -27,7 +27,7 @@
       	--color15: #eeffff;
       }
       
-      html, #q {
+      html {
           /*font-size: 18px;*/
           font-family: 'Noto Sans Mono', monospace;
           /*font-weight: black;*/
@@ -65,15 +65,15 @@
           white-space: nowrap;
       }
 
-      a::before, #w::before {
+      a::before {
           content:'[';
       }
 
-      a::after, #w::after {
+      a::after {
           content:']';
       }
       
-      a:link, #q {
+      a:link {
           color: var(--foreground);
       }
       
@@ -85,22 +85,15 @@
           color: var(--foreground);
       }
       
-      li > a:nth-of-type(1)::before,     li > a:nth-of-type(1)::after  {color: var(--color1)}
-      li > a:nth-of-type(2)::before,     li > a:nth-of-type(2)::after  {color: var(--color2)}
-      li > a:nth-of-type(3)::before,     li > a:nth-of-type(3)::after  {color: var(--color3)}
-      li > a:nth-of-type(4)::before,     li > a:nth-of-type(4)::after  {color: var(--color4)}
-      li > a:nth-of-type(5)::before,     li > a:nth-of-type(5)::after  {color: var(--color5)}
-      li > a:nth-of-type(6)::before,     li > a:nth-of-type(6)::after  {color: var(--color6)}
-      li > a:nth-of-type(7)::before,     li > a:nth-of-type(7)::after  {color: var(--color7)}
-      li > a:nth-of-type(8)::before,     li > a:nth-of-type(8)::after  {color: var(--color8)}
-
-
-      #q {
-          background: none;
-          outline: none !important;
-          vertical-align: middle;
-          text-align: center;
-      }
+      li > a:nth-of-type(1)::before, li > a:nth-of-type(1)::after  { color: var(--color1) }
+      li > a:nth-of-type(2)::before, li > a:nth-of-type(2)::after  { color: var(--color2) }
+      li > a:nth-of-type(3)::before, li > a:nth-of-type(3)::after  { color: var(--color3) }
+      li > a:nth-of-type(4)::before, li > a:nth-of-type(4)::after  { color: var(--color4) }
+      li > a:nth-of-type(5)::before, li > a:nth-of-type(5)::after  { color: var(--color5) }
+      li > a:nth-of-type(6)::before, li > a:nth-of-type(6)::after  { color: var(--color6) }
+      li > a:nth-of-type(7)::before, li > a:nth-of-type(7)::after  { color: var(--color7) }
+      li > a:nth-of-type(8)::before, li > a:nth-of-type(8)::after  { color: var(--color8) }
+      li > a:nth-of-type(9)::before, li > a:nth-of-type(9)::after  { color: var(--color9) }
 
     </style>
     <title>home</title>
@@ -139,14 +132,6 @@
                 <label>Fun</label>
                 <a href="https://www.dailykillersudoku.com/">killer sudoku</a>
                 <a href="https://www.nytimes.com/crosswords/game/mini">mini-crossword</a>
-            </li>
-            <li>
-                <label>Search</label>
-                <form action=https://www.google.com/search >
-                    <span id=w>
-                    <input id=q name=q type="text"></input>
-                    </span>
-                </form>
             </li>
         </ul>
     </main>
