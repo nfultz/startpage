@@ -28,9 +28,7 @@
       }
       
       html {
-          /*font-size: 18px;*/
-          font-family: 'Noto Sans Mono', monospace;
-          /*font-weight: black;*/
+          font-family: monospace;
           background-color: var(--background);
           color: var(--foreground);
       	  font-size: x-large;
@@ -84,6 +82,10 @@
       a:visited {
           color: var(--foreground);
       }
+
+      b {
+          text-shadow: 0 0 3px var(--foreground);
+      }
       
       li > a:nth-of-type(1)::before, li > a:nth-of-type(1)::after  { color: var(--color1) }
       li > a:nth-of-type(2)::before, li > a:nth-of-type(2)::after  { color: var(--color2) }
@@ -106,33 +108,33 @@
         <ul>
             <li>
                 <label>Personal</label>
-                <a href="http://www.neal.news">neal.news</a>
-                <a href="https://nfultz.github.io">nfultz.github.io</a>
+                <a accesskey=n href="http://www.neal.news">neal.<b>n</b>ews</a>
+                <a accesskey=i href="https://nfultz.github.io">nfultz.github.<b>i</b>o</a>
             </li>
             <li>
                 <label>Work</label>
-                <a href="https://github.com/nfultz">gh</a>
-                <a href="https://www.stackoverflow.com/">so</a>
-                <a href="http://console.aws.amazon.com/">aws</a>
-                <a href="https://mail.google.com/mail/ca/u/0">gm0</a>
-                <a href="https://mail.google.com/mail/ca/u/1">gm1</a>
-                <a href="https://mail.google.com/mail/ca/u/2">gm2</a>
-                <a href="https://app.slack.com/client?multi_team=1">slack</a>
+                <a accesskey=g href="https://github.com/nfultz"><b>g</b>h</a>
+                <a accesskey=o href="https://www.stackoverflow.com/">s<b>o</b></a>
+                <a accesskey=a href="http://console.aws.amazon.com/"><b>a</b>ws</a>
+                <a accesskey=0 href="https://mail.google.com/mail/ca/u/0">gm<b>0</b></a>
+                <a accesskey=1 href="https://mail.google.com/mail/ca/u/1">gm<b>1</b></a>
+                <a accesskey=2 href="https://mail.google.com/mail/ca/u/2">gm<b>2</b></a>
+                <a accesskey=s href="https://app.slack.com/client?multi_team=1"><b>s</b>lack</a>
             </li>
             <li>
                 <label>Social</label>
-                <a href="https://reddit.com/">reddit</a>
-                <a href="https://youtube.com">yt</a>
-                <a href="https://discord.com/channels/@me">discord</a>
-                <a href="https://pinboard.in/popular">pin</a>
-                <a href="https://metafilter.com">meta</a>
-                <a href="https://forums.somethingawful.com/usercp.php">sa</a>
+                <a accesskey=r href="https://reddit.com/"><b>r</b>eddit</a>
+                <a accesskey=y href="https://youtube.com"><b>y</b>t</a>
+                <a accesskey=d href="https://discord.com/channels/@me"><b>d</b>iscord</a>
+                <a accesskey=p href="https://pinboard.in/popular"><b>p</b>in</a>
+                <a accesskey=m href="https://metafilter.com"><b>m</b>eta</a>
+                <a accesskey=w href="https://forums.somethingawful.com/usercp.php">sa</a>
             </li>
             <li>
                 <label>Fun</label>
-                <a href="https://www.dailykillersudoku.com/">killer sudoku</a>
-                <a href="https://www.nytimes.com/crosswords/game/mini">mini-crossword</a>
-                <a href="http://cirri.al/sharks/">sharks</a>
+                <a accesskey=k href="https://www.dailykillersudoku.com/"><b>k</b>iller sudoku</a>
+                <a accesskey=c href="https://www.nytimes.com/crosswords/game/mini">mini-<b>c</b>rossword</a>
+                <a accesskey=s href="http://cirri.al/sharks/"><b>s</b>harks</a>
             </li>
         </ul>
     </main>
