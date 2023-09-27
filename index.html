@@ -6,9 +6,10 @@
     <style>
 
       :root {
-        --wallpaper: url();
-        --background: #263238;
-        --foreground: #eeffff;
+        zoom: 200%;
+        color-scheme: light dark; /* both supported */
+        --foreground: #070707;
+        --background: #c0cccc;
         --color0: #2e3c43;
         --color1: #f07178;
         --color2: #c3e88d;
@@ -25,6 +26,13 @@
         --color13: #c792ea;
         --color14: #89ddff;
         --color15: #eeffff;
+      }
+
+      @media (prefers-color-scheme: dark) {
+          :root {
+            --background: #263238;
+            --foreground: #eeffff;
+          }
       }
 
       body {
