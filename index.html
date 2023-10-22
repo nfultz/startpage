@@ -2,155 +2,169 @@
 <html lang="en">
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
 
+  :root {
+    zoom: 200%;
+    color-scheme: light dark; /* both supported */
+    --foreground: #070707;
+    --background: #c0cccc;
+    --color0: #2e3c43;
+    --color1: #f07178;
+    --color2: #c3e88d;
+    --color3: #ffcb6b;
+    --color4: #82aaff;
+    --color5: #c792ea;
+    --color6: #89ddff;
+    --color7: #b2ccd6;
+    --color8: #3c4d54;
+    --color9: #f07178;
+    --color10: #c3e88d;
+    --color11: #ffcb6b;
+    --color12: #82aaff;
+    --color13: #c792ea;
+    --color14: #89ddff;
+    --color15: #eeffff;
+  }
+
+  @media (prefers-color-scheme: dark) {
       :root {
-        zoom: 200%;
-        color-scheme: light dark; /* both supported */
-        --foreground: #070707;
-        --background: #c0cccc;
-        --color0: #2e3c43;
-        --color1: #f07178;
-        --color2: #c3e88d;
-        --color3: #ffcb6b;
-        --color4: #82aaff;
-        --color5: #c792ea;
-        --color6: #89ddff;
-        --color7: #b2ccd6;
-        --color8: #3c4d54;
-        --color9: #f07178;
-        --color10: #c3e88d;
-        --color11: #ffcb6b;
-        --color12: #82aaff;
-        --color13: #c792ea;
-        --color14: #89ddff;
-        --color15: #eeffff;
+        --background: #263238;
+        --foreground: #eeffff;
       }
+  }
 
-      @media (prefers-color-scheme: dark) {
-          :root {
-            --background: #263238;
-            --foreground: #eeffff;
-          }
-      }
+  body {
+      font-family: monospace;
+      background-color: var(--background);
+      color: var(--foreground);
+      font-size: x-large;
+  }
 
-      body {
-          font-family: monospace;
-          background-color: var(--background);
-          color: var(--foreground);
-          font-size: x-large;
-      }
+  /* h/t https://gist.github.com/JoeyBurzynski/617fb6201335779f8424ad9528b72c41 */
+  main {
+      max-width: 48rem;
+      padding: 2rem;
+      margin: auto;
+  }
 
-      /* h/t https://gist.github.com/JoeyBurzynski/617fb6201335779f8424ad9528b72c41 */
-      main {
-          max-width: 48rem;
-          padding: 2rem;
-          margin: auto;
-      }
+  ul {
+      list-style-type:none;
+      line-height:2;
+  }
 
-      ul {
-          list-style-type:none;
-          line-height:2;
-      }
+  li {
+      display: flex;
+      justify-content: space-between;
+      clear: right;
+  }
 
-      li {
-          display: flex;
-          justify-content: space-between;
-          clear: right;
-      }
+  ul label {
+      float: left;
+      min-width: 10ch;
+      text-align: right;
+      font-weight: bold;
+      margin-right: 2ch;
+  }
 
-      label {
-          float: left;
-          min-width: 10ch;
-          text-align: right;
-          font-weight: bold;
-          margin-right: 2ch;
-      }
-      
-      a{
-          text-decoration: none;
-          white-space: nowrap;
-      }
+  a {
+      text-decoration: none;
+      white-space: nowrap;
+  }
 
-      a::before {
-          content:'[';
-      }
+  a::before {
+      content:'[';
+  }
 
-      a::after {
-          content:']';
-      }
-      
-      a:link {
-          color: var(--foreground);
-      }
-      
-      a:hover {
-          font-weight: bold;
-      }
-      
-      a:visited {
-          color: var(--foreground);
-      }
+  a::after {
+      content:']';
+  }
 
-      b {
-          text-shadow: 0 0 3px var(--foreground);
-      }
-      
-      li > a:nth-of-type(1)::before, li > a:nth-of-type(1)::after  { color: var(--color1) }
-      li > a:nth-of-type(2)::before, li > a:nth-of-type(2)::after  { color: var(--color2) }
-      li > a:nth-of-type(3)::before, li > a:nth-of-type(3)::after  { color: var(--color3) }
-      li > a:nth-of-type(4)::before, li > a:nth-of-type(4)::after  { color: var(--color4) }
-      li > a:nth-of-type(5)::before, li > a:nth-of-type(5)::after  { color: var(--color5) }
-      li > a:nth-of-type(6)::before, li > a:nth-of-type(6)::after  { color: var(--color6) }
-      li > a:nth-of-type(7)::before, li > a:nth-of-type(7)::after  { color: var(--color7) }
-      li > a:nth-of-type(8)::before, li > a:nth-of-type(8)::after  { color: var(--color8) }
-      li > a:nth-of-type(9)::before, li > a:nth-of-type(9)::after  { color: var(--color9) }
+  a:link {
+      color: var(--foreground);
+  }
 
-    </style>
-    <title>home</title>
-    <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">&#x1F4D1;</text></svg>'>
+  a:hover {
+      font-weight: bold;
+  }
+
+  a:visited {
+      color: var(--foreground);
+  }
+
+  b {
+      text-shadow: 0 0 3px var(--foreground);
+  }
+
+  li > a:nth-of-type(1)::before, li > a:nth-of-type(1)::after  { color: var(--color1) }
+  li > a:nth-of-type(2)::before, li > a:nth-of-type(2)::after  { color: var(--color2) }
+  li > a:nth-of-type(3)::before, li > a:nth-of-type(3)::after  { color: var(--color3) }
+  li > a:nth-of-type(4)::before, li > a:nth-of-type(4)::after  { color: var(--color4) }
+  li > a:nth-of-type(5)::before, li > a:nth-of-type(5)::after  { color: var(--color5) }
+  li > a:nth-of-type(6)::before, li > a:nth-of-type(6)::after  { color: var(--color6) }
+  li > a:nth-of-type(7)::before, li > a:nth-of-type(7)::after  { color: var(--color7) }
+  li > a:nth-of-type(8)::before, li > a:nth-of-type(8)::after  { color: var(--color8) }
+  li > a:nth-of-type(9)::before, li > a:nth-of-type(9)::after  { color: var(--color9) }
+
+  input.toggle { display: none }
+
+  .toggle:checked + ul a::before,
+  .toggle:checked + ul a::after  {
+      content: "";
+  }
+
+  .toggle:checked + ul a[accesskey]::after  {
+      content: "[" attr(accesskey) "]";
+      vertical-align: super;
+      font-size: 50%;
+  }
+
+  </style>
+  <title>home</title>
+  <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">&#x1F4D1;</text></svg>'>
 </head>
 
 <body>
     <main>
-        <h1> HIA RYLAH </h1>
+        <h1> <label for=collapsible> HIA RYLAH </label> </h1>
+        <input id=collapsible class=toggle type=checkbox>
         <ul>
 
             <label>Personal</label>
             <li>
-                <a accesskey=n href="http://www.neal.news">neal.<b>n</b>ews</a>
-                <a accesskey=i href="https://nfultz.github.io">nfultz.github.<b>i</b>o</a>
-                <a accesskey=p href="https://nfultz.github.io/startpage">start<b>p</b>age</a>
+                <a accesskey=n href="http://www.neal.news">neal.news</a>
+                <a accesskey=i href="https://nfultz.github.io">nfultz.github.io</a>
+                <a accesskey=/ href="https://nfultz.github.io/startpage">startpage</a>
             </li>
 
             <label>Work</label>
             <li>
-                <a accesskey=g href="https://github.com/nfultz"><b>g</b>h</a>
-                <a accesskey=o href="https://stackoverflow.com/users/saves/986793/all">s<b>o</b></a>
-                <a accesskey=a href="http://console.aws.amazon.com/"><b>a</b>ws</a>
-                <a accesskey=0 href="https://mail.google.com/mail/ca/u/0/#search/in%3Ainbox+label%3Aunread">gm<b>0</b></a>
-                <a accesskey=1 href="https://mail.google.com/mail/ca/u/1/#search/in%3Ainbox+label%3Aunread">gm<b>1</b></a>
-                <a accesskey=2 href="https://mail.google.com/mail/ca/u/2/#search/in%3Ainbox+label%3Aunread">gm<b>2</b></a>
-                <a accesskey=s href="https://app.slack.com/client?multi_team=1"><b>s</b>lack</a>
+                <a accesskey=g href="https://github.com/nfultz">gh</a>
+                <a accesskey=o href="https://stackoverflow.com/users/saves/986793/all">so</a>
+                <a accesskey=a href="http://console.aws.amazon.com/">aws</a>
+                <a accesskey=0 href="https://mail.google.com/mail/ca/u/0/#search/in%3Ainbox+label%3Aunread">gm0</a>
+                <a accesskey=1 href="https://mail.google.com/mail/ca/u/1/#search/in%3Ainbox+label%3Aunread">gm1</a>
+                <a accesskey=2 href="https://mail.google.com/mail/ca/u/2/#search/in%3Ainbox+label%3Aunread">gm2</a>
+                <a accesskey=s href="https://app.slack.com/client?multi_team=1">slack</a>
             </li>
 
             <label>Social</label>
             <li>
-                <a accesskey=r href="https://reddit.com/"><b>r</b>eddit</a>
-                <a accesskey=y href="https://www.youtube.com/playlist?list=WL"><b>y</b>t</a>
-                <a accesskey=p href="https://pinboard.in/popular"><b>p</b>in</a>
-                <a accesskey=k href="https://kagi.com/smallweb/"><b>k</b>sw</a>
-                <a accesskey=m href="https://metafilter.com"><b>m</b>eta</a>
-                <a accesskey=w href="https://forums.somethingawful.com/usercp.php">a<b>w</b>ful</a>
+                <a accesskey=r href="https://reddit.com/">reddit</a>
+                <a accesskey=y href="https://www.youtube.com/playlist?list=WL">yt</a>
+                <a accesskey=p href="https://pinboard.in/popular">pin</a>
+                <a accesskey=k href="https://kagi.com/smallweb/">ksw</a>
+                <a accesskey=m href="https://metafilter.com">meta</a>
+                <a accesskey=w href="https://forums.somethingawful.com/usercp.php">awful</a>
             </li>
 
             <label>Fun</label>
             <li>
-                <a accesskey=/ href="https://www.dailykillersudoku.com/">sudoku</a>
-                <a accesskey=/ href="https://www.nytimes.com/crosswords/game/mini">crossword</a>
-                <a accesskey=/ href="https://murdle.com/">murdle</a>
-                <a accesskey=/ href="http://cirri.al/sharks/">sharks</a>
+                <a href="https://www.dailykillersudoku.com/">sudoku</a>
+                <a href="https://www.nytimes.com/crosswords/game/mini">crossword</a>
+                <a href="https://murdle.com/">murdle</a>
+                <a href="http://cirri.al/sharks/">sharks</a>
             </li>
         </ul>
     </main>
